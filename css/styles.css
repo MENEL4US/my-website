@@ -1,0 +1,86 @@
+html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Lato', sans-serif;
+    letter-spacing: 0.05rem;
+    font-size: 0;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #373C3C;
+}
+
+.navigation {
+    background-color: #373C3C;
+    color: #fff;
+    height: 50px;
+}
+
+.navigation ul {
+    margin: 0;
+    list-style: none;
+    padding-left: 0;
+    height: 50px;
+    text-align: right;
+}
+
+.navigation ul li {
+    display: inline-block;
+    padding-left: 30px;
+    padding-right: 30px;
+    line-height: 50px;
+    letter-spacing: 0.1rem;
+    font-size: 16px;
+}
+
+.navigation ul li:hover {
+    color: #24C6C1;
+    cursor: pointer;
+}
+
+.capa {
+    color: #fff;
+}
+
+.capa h1 {
+    font-weight: 400;
+    letter-spacing: 0.25rem;
+    font-size: 45px;
+    margin-top: 170px;
+    text-transform: uppercase;
+    line-height: 45px;
+}
+
+.capa h2 {
+    font-size: 26px;
+    font-weight: 300;
+}
+
+.capa span {
+    color: #24C6C1;
+    display: block;
+}
+
+.capa .profile-pic,
+.capa .profile-title {
+    display: inline-block;
+    height: 550px;
+    vertical-align: top;
+}
+
+.profile-pic {
+    width: 40%;
+    text-align: center;
+}
+
+.profile-pic img {
+    width: 300px;
+    border-radius: 50%;
+    margin-top: 80px;
+}
+
+.profile-title {
+    width: 60%;
+}
