@@ -22,7 +22,7 @@
 
     <body class="sidebar-off">
         <div class="container">
-            <div class="navigation">
+            <div class="navigation menu">
                 <ul>
                     <li class="link"><span title="Exibir formas de contato">CONTATO</span></li>
                     <li title="exibir opções de menu" class="hamburguer-icon">&#9776;</li>
@@ -38,7 +38,7 @@
 
                 <div class="title">
                     <h1 title="Nome Luiz Mendes">Luiz<span>Mendes</span></h1>
-                    <h2 title="Descrição das linguagens">Lorem ipsum dolor sit amet consectetur.</h2>
+                    <h2 title="Descrição das linguagens">Desenvolvedor PHP | Python | JavaScript | MySQL | Node.js</h2>
                 </div>
             </div>
         </div>
@@ -57,7 +57,7 @@
             </div>
 
             <div class="body">
-                <p title="Endereço de e-mail"><i class="fa-brands fa-linkedin-in"></i> <span>luizrodriguesbmm@gmail.com</span></p>
+                <p title="Endereço de e-mail"><i class="fa-regular fa-envelope"></i> <span>luizrodriguesbmm@gmail.com</span></p>
                 <p title="Visitar Linkedin"><a href="https://www.linkedin.com/in/luiz-mendes-dev/" target="_blank"><i class="fa-brands fa-linkedin-in"></i> <span>Linkedin</span></a></p>
             </div>
         </div>
@@ -83,7 +83,7 @@
                 // console.log(text)
             }
 
-            typeWriter(document.querySelector('.banner .title h2'))
+            // typeWriter(document.querySelector('.banner .title h2'))
 
             document.querySelector(".navigation li.link").addEventListener("click", function(e) {
                 const body = document.querySelector('body');
@@ -94,6 +94,21 @@
                 } else {
                     body.classList.add('sidebar-off')
                     body.classList.remove('show-sidebar')
+                }
+            });
+
+            document.querySelector(".navigation li.hamburguer-icon").addEventListener("click", function(e) {
+                const body = document.querySelector('body');
+                const icon = document.querySelector(".navigation li.hamburguer-icon");
+                
+                if (!body.classList.contains('mobile-menu')) {
+                    // body.classList.remove('sidebar-off')
+                    body.classList.add('mobile-menu');
+                    icon.innerHTML = '&times;';
+                } else {
+                    // body.classList.add('sidebar-off')
+                    body.classList.remove('mobile-menu');
+                    icon.innerHTML = '&#9776;';
                 }
             });
 

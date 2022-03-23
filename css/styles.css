@@ -32,7 +32,7 @@ body.sidebar-off .container {
     height: 50px;
     max-width: 1366px;
     width: 100vw;
-    animation: navigation-menu 5s;
+    /* animation: navigation-menu 5s; */
 }
 
 .navigation ul {
@@ -76,7 +76,7 @@ body.sidebar-off .container {
 .footer {
     height: 50px;
     width: 100%;
-    animation: navigation-menu 5s;
+    /* animation: navigation-menu 5s; */
 }
 
 .footer ul {
@@ -112,7 +112,7 @@ body.sidebar-off .container {
 }
 
 .banner h2 {
-    font-size: 26px;
+    font-size: 20px;
     font-weight: 300;
 }
 
@@ -133,20 +133,20 @@ body.sidebar-off .container {
     text-align: center;
     margin-top: 15vh;
     height: 60vh;
-    animation: profile-capa 5s;
+    /* animation: profile-capa 5s; */
 }
 
 .banner .title {
     width: 59%;
     height: 45vh;
     margin-top: 30vh;
-    animation: profile-title 5s;
+    /* animation: profile-title 5s; */
 }
 
 .banner .title h2::after {
     content: '|';
     margin-left: 5px;
-    animation: piscar 1s infinite;
+    /* animation: piscar 1s infinite; */
 }
 
 .banner .pic img {
@@ -280,5 +280,152 @@ body.sidebar-off .sidebar {
     }
     50% {
         opacity: 0;
+    }
+}
+
+@media (max-width: 1000px) {
+    /* .banner */
+    .banner .title {
+        margin-top: 20vh;
+        transition: all 1s;
+    }
+    .banner .title h1 {
+        font-size: 38px;
+        transition: all 1s;
+    }
+    .banner .title h2 {
+        font-size: 18px;
+        transition: all 1s;
+    }
+    .banner .pic {
+        margin-top: 25px;
+        transition: all 1s;
+    }
+    .banner .pic img {
+        max-height: 45vh;
+        transition: all 1s;
+    }
+    .sidebar {
+        width: 40vw;
+        transition: all 1s;
+    }
+    body.sidebar-off .sidebar {
+        right: -40vw;
+        transition: all 1s;
+    }
+}
+
+@media (max-width: 820px) {
+    .navigation li.link {
+        display: none;
+        transition: all 1s;
+    }
+    .navigation li.hamburguer-icon {
+        display: block;
+        /* color: #ffffff; */
+        /* font-size: 18px; */
+        transition: all 1s;
+    }
+    .mobile-menu .menu {
+        /* background-color: green; */
+        height: auto;
+        transition: all 1s;
+    }
+    .mobile-menu .menu ul {
+        /* background-color: green; */
+        height: auto;
+        text-align: center;
+        padding-right: 15% !important;
+        padding-left: 15% !important;
+    }
+    .mobile-menu .menu ul li {
+        border-bottom: solid #ffffff 1px;
+        width: 100%;
+        display: block !important;
+        transition: all 1s;
+    }
+    /* .mobile-menu ul li:last-child { */
+    /* border-bottom: 0; */
+    /* width: 100%; */
+    /* display: block !important; */
+    /* } */
+    .banner {
+        height: auto;
+        transition: all 1s;
+    }
+    .banner .pic {
+        width: 100%;
+        margin-top: 25px;
+        max-height: 35vh;
+        transition: all 1s;
+    }
+    .banner .pic img {
+        max-height: 35vh;
+        transition: all 1s;
+    }
+    .banner .title {
+        width: 100%;
+        margin-top: 25px;
+        text-align: center;
+        height: auto;
+        transition: all 1s;
+    }
+    .footer {
+        position: fixed;
+        bottom: 0;
+        transition: all 1s;
+    }
+    .footer ul {
+        /* margin: 0; */
+        /* list-style: none; */
+        /* text-align: right; */
+        padding-right: 20px;
+        transition: all 1s;
+    }
+    .navigation ul {
+        /* margin: 0; */
+        /* list-style: none; */
+        /* height: 50px; */
+        padding-left: 20px;
+        transition: all 1s;
+    }
+    .sidebar {
+        width: 50vw;
+        transition: all 1s;
+    }
+    .sidebar .body {
+        padding: 0 15px;
+    }
+    body.sidebar-off .sidebar {
+        right: -50vw;
+        transition: all 1s;
+    }
+}
+
+@media (max-width: 660px) {
+    .sidebar {
+        width: 60vw;
+        transition: all 1s;
+    }
+    .sidebar .body {
+        padding: 0 10px;
+    }
+    body.sidebar-off .sidebar {
+        right: -60vw;
+        transition: all 1s;
+    }
+}
+
+@media (max-width: 500px) {
+    .sidebar {
+        width: 70vw;
+        transition: all 1s;
+    }
+    .sidebar .body {
+        padding: 0 10px;
+    }
+    body.sidebar-off .sidebar {
+        right: -70vw;
+        transition: all 1s;
     }
 }
