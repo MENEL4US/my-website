@@ -1,7 +1,3 @@
-<?php
-    $v = time();
-?>
-
     <!DOCTYPE html>
     <html lang="pt-BR">
 
@@ -19,7 +15,13 @@
 
         <script src="https://kit.fontawesome.com/8f1e203266.js" crossorigin="anonymous"></script>
 
-        <link rel="stylesheet" href="css/styles.css?<?=$v;?>">
+        <link rel="stylesheet" href="css/styles.css">
+
+        <!-- 
+            Luiz Mendes 
+            Florianópolis, SC
+            23/03/2022
+        -->
     </head>
 
     <body class="sidebar-off">
@@ -27,7 +29,7 @@
             <div class="navigation menu">
                 <ul>
                     <li class="link"><span title="Exibir formas de contato">CONTATO</span></li>
-                    <li title="exibir opções de menu" class="hamburguer-icon">&#9776;</li>
+                    <li title="Exibir opções de menu" class="hamburguer-icon">&#9776;</li>
                 </ul>
             </div>
         </div>
@@ -64,71 +66,11 @@
             </div>
         </div>
 
+        <script src="js/scripts.js"></script>
+
         <script>
-            function typeWriter(e) {
-                const text = e.innerHTML.split('');
-
-                e.innerHTML = '';
-
-                setTimeout(() => {
-
-                    text.forEach((c, i) => {
-                        setTimeout(() => {
-
-                            e.innerHTML += c;
-
-                        }, 100 * i);
-                    })
-
-                }, 5000);
-
-                // console.log(text)
-            }
-
-            // typeWriter(document.querySelector('.banner .title h2'))
-
-            document.querySelector(".navigation li.link").addEventListener("click", function(e) {
-                const body = document.querySelector('body');
-
-                if (!body.classList.contains('show-sidebar')) {
-                    body.classList.remove('sidebar-off')
-                    body.classList.add('show-sidebar')
-                } else {
-                    body.classList.add('sidebar-off')
-                    body.classList.remove('show-sidebar')
-                }
-            });
-
-            document.querySelector(".navigation li.hamburguer-icon").addEventListener("click", function(e) {
-                const body = document.querySelector('body');
-                const icon = document.querySelector(".navigation li.hamburguer-icon");
-                
-                if (!body.classList.contains('mobile-menu')) {
-                    // body.classList.remove('sidebar-off')
-                    body.classList.add('mobile-menu');
-                    icon.innerHTML = '&times;';
-                } else {
-                    // body.classList.add('sidebar-off')
-                    body.classList.remove('mobile-menu');
-                    icon.innerHTML = '&#9776;';
-                }
-            });
-
-            document.querySelector(".sidebar .header .close-icon").addEventListener("click", function(e) {
-                const body = document.querySelector('body');
-
-                if (body.classList.contains('show-sidebar')) {
-                    body.classList.remove('show-sidebar')
-                    body.classList.add('sidebar-off')
-                }
-            });
+            typeWriter(document.querySelector('.banner .title h2'))
         </script>
 
     </body>
-
     </html>
-    <!-- 
-    Luiz Mendes 
-    Florianópolis, SC
-    23/03/2022
--->
