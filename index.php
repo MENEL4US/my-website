@@ -23,8 +23,8 @@
     <div class="container">
         <div class="navigation">
             <ul>
-                <li><span title="Exibir contato">CONTATO</span></li>
-                <li class="hamburguer-icon">&#9776;</li>
+                <li><span title="Exibir formas de contato">CONTATO</span></li>
+                <li title="exibir opções de menu" class="hamburguer-icon">&#9776;</li>
             </ul>
         </div>
     </div>
@@ -32,23 +32,47 @@
     <div class="container">
         <div class="banner">
             <div class="pic">
-                <img src="img/luiz-mendes.png" alt="Foto de Luiz Mendes">
+                <img title="Foto de perfil Luiz Mendes" src="img/luiz-mendes.png" alt="Foto de Luiz Mendes">
             </div>
 
             <div class="title">
-                <h1>Luiz<span>Mendes</span></h1>
-                <h2>Lorem ipsum dolor sit amet consectetur.</h2>
+                <h1 title="Nome Luiz Mendes">Luiz<span>Mendes</span></h1>
+                <h2 title="Descrição das linguagens">Lorem ipsum dolor sit amet consectetur.</h2>
             </div>
         </div>
     </div>
 
     <div class="container">
-    <div class="footer">
+        <div class="footer">
             <ul>
-                <li title="Perfil do linkedin"><a href=""><i class="fa-brands fa-linkedin-in"></i></a></li>
+                <li title="Link para perfil do linkedin"><a href=""><i class="fa-brands fa-linkedin-in"></i></a></li>
             </ul>
         </div>
     </div>
+
+    <script>
+        function typeWriter(e) {
+            const text = e.innerHTML.split('');
+
+            e.innerHTML = '';
+
+            setTimeout(() => {
+
+                text.forEach((c, i) => {
+                    setTimeout(() => {
+
+                        e.innerHTML += c;
+                        
+                    }, 100 * i);
+                })
+
+            }, 5000);
+
+            // console.log(text)
+        }
+
+        typeWriter(document.querySelector('.banner .title h2'))
+    </script>
     
 </body>
 </html>
