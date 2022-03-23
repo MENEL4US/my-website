@@ -3,19 +3,32 @@ html {
     padding: 0;
     font-family: 'Lato', sans-serif;
     letter-spacing: 0.05rem;
-    font-size: 0;
+    /* font-size: 0; */
 }
 
 body {
     margin: 0;
     padding: 0;
-    background-color: #373C3C;
+    /* background-color: #373C3C; */
+}
+
+.container {
+    align-items: center;
+    display: flex;
+    /* flex-direction: row; */
+    justify-content: center;
+    /* align-items: center; */
+    background-color: gold;
 }
 
 .navigation {
-    background-color: #373C3C;
-    color: #fff;
+    /* background-color: #373C3C; */
+    background-color: green;
+    /* color: #fff; */
     height: 50px;
+    /* animation: navigation-menu 5s; */
+    max-width: 1366px;
+    width: 100vw;
 }
 
 .navigation ul {
@@ -28,59 +41,163 @@ body {
 
 .navigation ul li {
     display: inline-block;
-    padding-left: 30px;
+    /* padding-left: 30px; */
     padding-right: 30px;
     line-height: 50px;
-    letter-spacing: 0.1rem;
-    font-size: 16px;
+    /* letter-spacing: 0.1rem; */
+    /* font-size: 16px; */
 }
 
-.navigation ul li:hover {
+.navigation ul li span {
+    font-size: 16px;
+    letter-spacing: 0.1rem;
+    color: #ffffff;
+}
+
+.navigation ul li span:hover {
     color: #24C6C1;
     cursor: pointer;
 }
 
-.capa {
-    color: #fff;
+.navigation ul li a:hover {
+    /* color: #24C6C1; */
+    cursor: pointer;
+    /* letter-spacing: 0.1rem; */
+    /* font-size: 16px; */
 }
 
-.capa h1 {
+.navigation li.hamburguer-icon {
+    display: none;
+}
+
+.footer {
+    background-color: rebeccapurple;
+    height: 50px;
+    width: 100%;
+}
+
+.footer ul {
+    margin: 0;
+    list-style: none;
+    text-align: right;
+    /* padding-right: 30px; */
+}
+
+.footer ul li {
+    padding-right: 30px;
+    line-height: 50px;
+}
+
+.footer ul li a {
+    font-size: 16px;
+    color: #24C6C1;
+    text-decoration: none;
+}
+
+
+/* .navigation ul li:hover {
+    color: #24C6C1;
+    cursor: pointer;
+} */
+
+.banner {
+    /* color: #fff; */
+    background-color: orange;
+    /* height: calc(100vh - 50px);
+    max-width: 1200px; */
+    height: calc(100vh - 100px);
+    max-width: 1366px;
+    width: 100vw;
+}
+
+.banner h1 {
     font-weight: 400;
     letter-spacing: 0.25rem;
     font-size: 45px;
-    margin-top: 170px;
+    /* margin-top: 170px; */
     text-transform: uppercase;
     line-height: 45px;
 }
 
-.capa h2 {
+.banner h2 {
     font-size: 26px;
     font-weight: 300;
 }
 
-.capa span {
+.banner span {
     color: #24C6C1;
     display: block;
 }
 
-.capa .profile-pic,
-.capa .profile-title {
+.banner .pic,
+.banner .title {
     display: inline-block;
-    height: 550px;
+    /* height: 550px; */
     vertical-align: top;
 }
 
-.profile-pic {
+.banner .pic {
+    background-color: yellow;
     width: 40%;
     text-align: center;
+    margin-top: 15vh;
+    height: 60vh;
 }
 
-.profile-pic img {
-    width: 300px;
-    border-radius: 50%;
-    margin-top: 80px;
+.banner .title {
+    background-color: blue;
+    width: 59%;
+    height: 45vh;
+    margin-top: 30vh;
 }
 
-.profile-title {
-    width: 60%;
+.pic {
+    /* width: 40%; */
+    /* text-align: center; */
+    /* animation: profile-capa 5s; */
+}
+
+.pic img {
+    max-width: 400px;
+    border-radius: 30px;
+    /* margin-top: 80px; */
+}
+
+.title {
+    /* width: 59%; */
+    /* animation: profile-title 5s; */
+}
+
+@keyframes profile-capa {
+    0% {
+        opacity: 0;
+        transform: translate(0px, 50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(0px, 0px);
+    }
+}
+
+@keyframes profile-title {
+    0% {
+        opacity: 0;
+        transform: translate(0px, -50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(0px, 0px);
+    }
+}
+
+@keyframes navigation-menu {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
