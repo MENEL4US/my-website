@@ -2,81 +2,115 @@
     $v = time();
 ?>
 
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Luiz Mendes</title>
+    <!DOCTYPE html>
+    <html lang="pt-BR">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap" rel="stylesheet">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Luiz Mendes</title>
 
-    <script src="https://kit.fontawesome.com/8f1e203266.js" crossorigin="anonymous"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="css/styles.css?<?=$v;?>">
-</head>
+        <script src="https://kit.fontawesome.com/8f1e203266.js" crossorigin="anonymous"></script>
 
-<body>
-    <div class="container">
-        <div class="navigation">
-            <ul>
-                <li><span title="Exibir formas de contato">CONTATO</span></li>
-                <li title="exibir opções de menu" class="hamburguer-icon">&#9776;</li>
-            </ul>
-        </div>
-    </div>
+        <link rel="stylesheet" href="css/styles.css?<?=$v;?>">
+    </head>
 
-    <div class="container">
-        <div class="banner">
-            <div class="pic">
-                <img title="Foto de perfil Luiz Mendes" src="img/luiz-mendes.png" alt="Foto de Luiz Mendes">
-            </div>
-
-            <div class="title">
-                <h1 title="Nome Luiz Mendes">Luiz<span>Mendes</span></h1>
-                <h2 title="Descrição das linguagens">Lorem ipsum dolor sit amet consectetur.</h2>
+    <body class="sidebar-off">
+        <div class="container">
+            <div class="navigation">
+                <ul>
+                    <li class="link"><span title="Exibir formas de contato">CONTATO</span></li>
+                    <li title="exibir opções de menu" class="hamburguer-icon">&#9776;</li>
+                </ul>
             </div>
         </div>
-    </div>
 
-    <div class="container">
-        <div class="footer">
-            <ul>
-                <li title="Link para perfil do linkedin"><a href=""><i class="fa-brands fa-linkedin-in"></i></a></li>
-            </ul>
+        <div class="container">
+            <div class="banner">
+                <div class="pic">
+                    <img title="Foto de perfil Luiz Mendes" src="img/luiz-mendes.png" alt="Foto de Luiz Mendes">
+                </div>
+
+                <div class="title">
+                    <h1 title="Nome Luiz Mendes">Luiz<span>Mendes</span></h1>
+                    <h2 title="Descrição das linguagens">Lorem ipsum dolor sit amet consectetur.</h2>
+                </div>
+            </div>
         </div>
-    </div>
 
-    <script>
-        function typeWriter(e) {
-            const text = e.innerHTML.split('');
+        <div class="container">
+            <div class="footer">
+                <ul>
+                    <li title="Link para perfil do linkedin"><a href="https://www.linkedin.com/in/luiz-mendes-dev/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a></li>
+                </ul>
+            </div>
+        </div>
 
-            e.innerHTML = '';
+        <div class="sidebar">
+            <div class="header">
+                <h2 class="close-icon" title="Fechar">&Cross;</h2>
+            </div>
 
-            setTimeout(() => {
+            <div class="body">
+                <p title="Endereço de e-mail"><i class="fa-brands fa-linkedin-in"></i> <span>luizrodriguesbmm@gmail.com</span></p>
+                <p title="Visitar Linkedin"><a href="https://www.linkedin.com/in/luiz-mendes-dev/" target="_blank"><i class="fa-brands fa-linkedin-in"></i> <span>Linkedin</span></a></p>
+            </div>
+        </div>
 
-                text.forEach((c, i) => {
-                    setTimeout(() => {
+        <script>
+            function typeWriter(e) {
+                const text = e.innerHTML.split('');
 
-                        e.innerHTML += c;
-                        
-                    }, 100 * i);
-                })
+                e.innerHTML = '';
 
-            }, 5000);
+                setTimeout(() => {
 
-            // console.log(text)
-        }
+                    text.forEach((c, i) => {
+                        setTimeout(() => {
 
-        typeWriter(document.querySelector('.banner .title h2'))
-    </script>
-    
-</body>
-</html>
-<!-- 
+                            e.innerHTML += c;
+
+                        }, 100 * i);
+                    })
+
+                }, 5000);
+
+                // console.log(text)
+            }
+
+            typeWriter(document.querySelector('.banner .title h2'))
+
+            document.querySelector(".navigation li.link").addEventListener("click", function(e) {
+                const body = document.querySelector('body');
+
+                if (!body.classList.contains('show-sidebar')) {
+                    body.classList.remove('sidebar-off')
+                    body.classList.add('show-sidebar')
+                } else {
+                    body.classList.add('sidebar-off')
+                    body.classList.remove('show-sidebar')
+                }
+            });
+
+            document.querySelector(".sidebar .header .close-icon").addEventListener("click", function(e) {
+                const body = document.querySelector('body');
+
+                if (body.classList.contains('show-sidebar')) {
+                    body.classList.remove('show-sidebar')
+                    body.classList.add('sidebar-off')
+                }
+            });
+        </script>
+
+    </body>
+
+    </html>
+    <!-- 
     Luiz Mendes 
     Florianópolis, SC
     23/03/2022
