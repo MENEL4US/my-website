@@ -13,8 +13,6 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap" rel="stylesheet">
 
-        <script src="https://kit.fontawesome.com/8f1e203266.js" crossorigin="anonymous"></script>
-
         <link rel="stylesheet" href="css/styles.css">
 
         <!-- 
@@ -52,7 +50,11 @@
         <div class="container">
             <div class="footer">
                 <ul>
-                    <li title="Link para perfil do linkedin"><a href="https://www.linkedin.com/in/luiz-mendes-dev/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a></li>
+                    <li title="Link para perfil do linkedin">
+                        <a href="https://www.linkedin.com/in/luiz-mendes-dev/" target="_blank">
+                            <img class="icone" src="img/linkedin-azul.svg" alt="Link para perfil do Linkedin">
+                        </a>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -63,8 +65,16 @@
             </div>
 
             <div class="body">
-                <p title="Endereço de e-mail"><i class="fa-regular fa-envelope"></i> <span>luizrodriguesbmm@gmail.com</span></p>
-                <p title="Visitar Linkedin"><a href="https://www.linkedin.com/in/luiz-mendes-dev/" target="_blank"><i class="fa-brands fa-linkedin-in"></i> <span>Linkedin</span></a></p>
+                <p title="Endereço de e-mail">
+                <img class="icone" src="img/email-cinza.svg" alt="Ícone de e-mail">
+                    <span title="Endereço de e-mail">luizrodriguesbmm@gmail.com</span>
+                </p>
+                <p title="Visitar Linkedin">
+                    <a href="https://www.linkedin.com/in/luiz-mendes-dev/" target="_blank">
+                        <img class="icone" src="img/linkedin-cinza.svg" alt="Link para perfil do Linkedin">
+                        <span>Linkedin</span>
+                    </a>
+                </p>
             </div>
         </div>
 
