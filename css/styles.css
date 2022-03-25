@@ -167,6 +167,7 @@ body.sidebar-off .container {
     display: block;
     background-color: #ffffff;
     width: 30vw;
+    max-width: 400px;
 }
 
 body.show-sidebar .sidebar {

@@ -39,7 +39,7 @@
         <div class="container">
             <div class="banner">
                 <div class="pic">
-                    <img title="Foto de perfil Luiz Mendes" src="img/luiz-mendes.png" alt="Foto de Luiz Mendes">
+                    <img title="Foto de perfil Luiz Mendes" src="img/luiz-mendes.gif" alt="Foto de Luiz Mendes">
                 </div>
 
                 <div class="title">
