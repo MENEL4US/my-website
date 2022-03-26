@@ -143,13 +143,6 @@ body.sidebar-off .container {
     animation: profile-title 5s;
 }
 
-.banner .title h2::after {
-    content: '|';
-    margin-left: 5px;
-    animation: piscar 1s infinite;
-    color: #24C6C1;
-}
-
 .banner .pic img {
     max-width: 400px;
     border-radius: 30px;
@@ -306,16 +299,6 @@ body.menu-mobile-off .menu-mobile {
     }
     100% {
         opacity: 1;
-    }
-}
-
-@keyframes piscar {
-    0%,
-    100% {
-        opacity: 1;
-    }
-    50% {
-        opacity: 0;
     }
 }
 

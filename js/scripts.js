@@ -1,17 +1,3 @@
-// Função que simula o efeito de digitação de uma máquina de escrever
-function typeWriter(e) {
-    const text = e.innerHTML.split('');
-
-    e.innerHTML = '';
-    setTimeout(() => {
-        text.forEach((c, i) => {
-            setTimeout(() => {
-                e.innerHTML += c;
-            }, 100 * i);
-        })
-    }, 5000);
-}
-
 // Navegação do sidebar de contato
 document.querySelector(".navigation li.link").addEventListener("click", function(e) {
     const body = document.querySelector('body');

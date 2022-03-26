@@ -14,6 +14,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap" rel="stylesheet">
 
         <link rel="stylesheet" href="css/styles.css">
+        <link rel="stylesheet" href="css/typewriter.css">
     </head>
 
     <body class="sidebar-off menu-mobile-off">
@@ -44,7 +45,7 @@
 
                 <div class="title">
                     <h1 title="Nome Luiz Mendes">Luiz<span>Mendes</span></h1>
-                    <h2 title="Descrição das linguagens">Desenvolvedor PHP | Python | JavaScript | MySQL | Node.js</h2>
+                    <h2 title="Descrição das linguagens" class="typewriter">Desenvolvedor PHP | Python | JavaScript | MySQL | Node.js</h2>
                 </div>
             </div>
         </div>
@@ -80,13 +81,8 @@
             </div>
         </div>
 
-
-
         <script src="js/scripts.js"></script>
-
-        <script>
-            typeWriter(document.querySelector('.banner .title h2'))
-        </script>
+        <script src="js/typewriter.min.js"></script>
 
     </body>
     </html>
