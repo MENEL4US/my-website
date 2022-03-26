@@ -16,7 +16,15 @@
         <link rel="stylesheet" href="css/styles.css">
     </head>
 
-    <body class="sidebar-off">
+    <body class="sidebar-off menu-mobile-off">
+
+            <div class="menu-mobile">
+                <ul>
+                    <li title="Exibir formas de contato" class="link">CONTATO</li>
+                    <li class="close-icon" title="Fechar menu">&times;</li>
+                </ul>
+            </div>
+
         <div class="container">
             <div class="navigation menu">
                 <ul>
@@ -24,6 +32,8 @@
                     <li title="Exibir opções de menu" class="hamburguer-icon">&#9776;</li>
                 </ul>
             </div>
+
+            
         </div>
 
         <div class="container">
@@ -69,6 +79,8 @@
                 </p>
             </div>
         </div>
+
+
 
         <script src="js/scripts.js"></script>
 
