@@ -14,14 +14,6 @@
         <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap" rel="stylesheet">
 
         <link rel="stylesheet" href="css/styles.css">
-
-        <!-- 
-            Luiz Mendes 
-            Florianópolis, SC
-            23/03/2022
-
-            https://github.com/MENEL4US/luizmendes.com.br
-        -->
     </head>
 
     <body class="sidebar-off">
